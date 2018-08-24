@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="COLQUISIRIModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Prueba">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="Fecha" Type="nchar" MaxLength="100" />
+          <Property Name="Hora" Type="nchar" MaxLength="100" />
+          <Property Name="Ubicación" Type="nchar" MaxLength="100" />
+          <Property Name="Operario" Type="nchar" MaxLength="100" />
+          <Property Name="Cargadora" Type="nchar" MaxLength="100" />
+          <Property Name="Producto" Type="nchar" MaxLength="100" />
+          <Property Name="Función" Type="nchar" MaxLength="100" />
+          <Property Name="Secuencia" Type="nchar" MaxLength="100" />
+          <Property Name="Peso" Type="nchar" MaxLength="100" />
+          <Property Name="Actividad" Type="nchar" MaxLength="100" />
+          <Property Name="Origen" Type="nchar" MaxLength="100" />
+          <Property Name="Camión" Type="nchar" MaxLength="100" />
+          <Property Name="Dirección" Type="nchar" MaxLength="100" />
+          <Property Name="Datos5" Type="nchar" MaxLength="100" />
+          <Property Name="Tara" Type="nchar" MaxLength="100" />
+          <Property Name="Notas" Type="nchar" MaxLength="100" />
+          <Property Name="Ciclo" Type="nchar" MaxLength="100" />
+          <Property Name="Rendimiento" Type="nchar" MaxLength="100" />
+          <Property Name="Mascara" Type="nchar" MaxLength="100" />
+          <Property Name="FechaMina" Type="nchar" MaxLength="100" />
+          <Property Name="Turno" Type="nchar" MaxLength="100" />
+          <Property Name="SecuenciaID" Type="nchar" MaxLength="1000" />
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="COLQUISIRIModelStoreContainer">
+          <EntitySet Name="Prueba" EntityType="Self.Prueba" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="COLQUISIRIModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Prueba">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="Fecha" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="Hora" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="Ubicación" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="Operario" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="Cargadora" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="Producto" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="Función" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="Secuencia" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="Peso" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="Actividad" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="Origen" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="Camión" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="Dirección" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="Datos5" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="Tara" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="Notas" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="Ciclo" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="Rendimiento" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="Mascara" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="FechaMina" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="Turno" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="SecuenciaID" Type="String" MaxLength="1000" FixedLength="true" Unicode="true" />
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityContainer Name="CopyDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Pruebas" EntityType="Self.Prueba" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="COLQUISIRIModelStoreContainer" CdmEntityContainer="CopyDBEntities">
+          <EntitySetMapping Name="Pruebas">
+            <EntityTypeMapping TypeName="COLQUISIRIModel.Prueba">
+              <MappingFragment StoreEntitySet="Prueba">
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Hora" ColumnName="Hora" />
+                <ScalarProperty Name="Ubicación" ColumnName="Ubicación" />
+                <ScalarProperty Name="Operario" ColumnName="Operario" />
+                <ScalarProperty Name="Cargadora" ColumnName="Cargadora" />
+                <ScalarProperty Name="Producto" ColumnName="Producto" />
+                <ScalarProperty Name="Función" ColumnName="Función" />
+                <ScalarProperty Name="Secuencia" ColumnName="Secuencia" />
+                <ScalarProperty Name="Peso" ColumnName="Peso" />
+                <ScalarProperty Name="Actividad" ColumnName="Actividad" />
+                <ScalarProperty Name="Origen" ColumnName="Origen" />
+                <ScalarProperty Name="Camión" ColumnName="Camión" />
+                <ScalarProperty Name="Dirección" ColumnName="Dirección" />
+                <ScalarProperty Name="Datos5" ColumnName="Datos5" />
+                <ScalarProperty Name="Tara" ColumnName="Tara" />
+                <ScalarProperty Name="Notas" ColumnName="Notas" />
+                <ScalarProperty Name="Ciclo" ColumnName="Ciclo" />
+                <ScalarProperty Name="Rendimiento" ColumnName="Rendimiento" />
+                <ScalarProperty Name="Mascara" ColumnName="Mascara" />
+                <ScalarProperty Name="FechaMina" ColumnName="FechaMina" />
+                <ScalarProperty Name="Turno" ColumnName="Turno" />
+                <ScalarProperty Name="SecuenciaID" ColumnName="SecuenciaID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
